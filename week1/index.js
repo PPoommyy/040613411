@@ -210,7 +210,7 @@ function createHerbsForm(herbs) {
               <a href="${herb.source}" class="link-info">${herb.source}</a>
             </dd>
             ${hasWarningIcon ? `
-              <dt class="h4 col-sm-4">หากมีสมุนไพรนี้อยู่ในครอบครอง ติดต่อ สธ. ที่</dt>
+              <dt class="h4 col-sm-4">หากมีสมุนไพรนี้อยู่ในครอบครอง ติดต่อ สธ. <a type="text text-decoration-none" class="h4 text-danger">ทันที</a> ที่</dt>
               <dd class="display-2 col-sm-8">
                 <a href="https://www.moph.go.th/index.php/contact" class="link-info">https://www.moph.go.th/index.php/contact</a>
               </dd>
