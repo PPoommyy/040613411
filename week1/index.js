@@ -159,7 +159,7 @@ function createHerbsForm(herbs) {
             </div>
 
         </div>
-        <p class="h3 mb-4">รายชื่อ และ รายละเอียด สมุนไพรที่เสี่ยงสูญพันธุ์ </p>
+        <p class="text-center h3 mb-4">รายชื่อ และ รายละเอียด สมุนไพรที่เสี่ยงสูญพันธุ์ </p>
         <div class="row">
           <div class="col-4">
             <div class="list-group" id="list-tab" role="tablist">
@@ -185,7 +185,7 @@ function createHerbsForm(herbs) {
             </div>
           </div>
           <div class="col-8">
-            <div class="tab-content" id="nav-tabContent">
+            <div class="tab-content text-center" id="nav-tabContent">
     `;
   
     herbs.forEach((herb, index) => {
