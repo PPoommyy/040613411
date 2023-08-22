@@ -30,34 +30,60 @@
                 help: true
             },
             {
-                fullname: 'นางสาวสวัสดี ยามเย็น',
+                fullname: 'นางสาวใส่ใจ ได้แค่มอง',
                 age: 20,
                 year: 3,
                 gpa: 2.00,
                 help: false
             },
             {
-                fullname: 'นางสาวดีเด่น ดีงาม',
+                fullname: 'นางสาวใส่ทอง ได้ทั้งบาง',
                 age: 20,
                 year: 3,
                 gpa: 2.00,
                 help: true
             },
             {
-                fullname: 'นางสาวลิซา แบล็กพิ้ง',
+                fullname: 'นางสาวแต แด่แดแด๊',
                 age: 19,
                 year: 2,
                 gpa: 2.90,
                 help: true
             },
             {
-                fullname: 'นางสาวดีน่า พิ้ง',
+                fullname: 'นางสาวตั้งใจ ทำงาน',
                 age: 18,
                 year: 1,
                 gpa: 3.70,
                 help: false
             },
         ];
+
+        for (let year = 1; year <= 4; year++) {
+            console.log(`ชั้นปีที่ ${year}`);
+            let hasScholarship = false;
+            
+            student.map((std, index)=>{
+                if (std.year === year && std.gpa > 3.20 )  {
+                    if (std.help) {
+                        console.log(`${std.fullname} เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย`);
+                        hasScholarship = true;
+                    } else {
+                        console.log(`${std.fullname} เนื่องจากเกรดเฉลี่ยถึงเกณฑ์ถึงแม้ไม่ได้ช่วยงานภาควิชา`);
+                        hasScholarship = true;
+                    }
+                } 
+
+                else if(std.year === year && std.year >= 2 && std.gpa >= 2.75){
+                    if (std.help) {
+                        console.log(`${std.fullname} เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย`);
+                        hasScholarship = true;
+                } 
+            }})
+            if (!hasScholarship) {
+                    console.log("ไม่มี");
+                }
+        }
 
         let i = 0; 
         let length = student.length;
