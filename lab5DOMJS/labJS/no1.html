@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student= [
+            {
+                fullname: 'นายตั้งใจ เรียนมาก',
+                age: 18, 
+                year: 1,
+                gpa: 3.40,
+                help: true
+            },
+            {
+                fullname: 'นายส่งงาน ตลอดมา',
+                age: 19,
+                year: 2,
+                gpa: 3.00,
+                help: false
+            },
+            {
+                fullname: 'นางสาวใส่ใจ ดีงาม',
+                age: 20,
+                year: 3,
+                gpa: 2.90,
+                help: true
+            },
+            {
+                fullname: 'นางสาวสวัสดี ยามเย็น',
+                age: 20,
+                year: 3,
+                gpa: 2.00,
+                help: false
+            },
+            {
+                fullname: 'นางสาวดีเด่น ดีงาม',
+                age: 20,
+                year: 3,
+                gpa: 2.00,
+                help: true
+            },
+            {
+                fullname: 'นางสาวลิซา แบล็กพิ้ง',
+                age: 19,
+                year: 2,
+                gpa: 2.90,
+                help: true
+            },
+            {
+                fullname: 'นางสาวดีน่า พิ้ง',
+                age: 18,
+                year: 1,
+                gpa: 3.70,
+                help: false
+            },
+        ];
+
+        let i = 0; 
+        let length = student.length;
+        
+        student.map((std, index)=>{
+            let birthYear = 2564 - std.age;
+            if (std.gpa > 3.20) {
+                if (std.help){
+                    console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย`);
+                }else{
+                    console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์ถึงแม้ไม่ได้ช่วยงานภาควิชา`);
+                }
+            }else if (std.year >= 2 && std.gpa >= 2.75) {
+                if (std.help){
+                    console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย`);
+                }else{
+                    console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์แต่ไม่ได้ช่วยงานภาควิชา`);
+                }
+            }else if (std.year >= 2 && std.gpa < 2.75) {
+                if (std.help){
+                    console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์ ถึงแม้ช่วยงานภาควิชา`);
+                }else{
+                    console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์และยังไม่ช่วยงานภาควิชาด้วย`);
+                }
+            }
+        })
+    </script>
+</body>
+</html>
