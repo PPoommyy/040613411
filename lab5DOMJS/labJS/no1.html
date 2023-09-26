@@ -58,9 +58,6 @@
                 help: false
             },
         ];
-
-        let i = 0; 
-        let length = student.length;
         
         student.map((std, index)=>{
             let birthYear = 2564 - std.age;
@@ -83,6 +80,25 @@
                     console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์และยังไม่ช่วยงานภาควิชาด้วย`);
                 }
             }
+        })
+
+        console.log("..")
+
+        student.map((std, index)=>{
+            let birthYear = 2564 - std.age;
+            let a = std.gpa > 3.20
+            ? std.help 
+                ? console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย`)
+                : console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์ถึงแม้ไม่ได้ช่วยงานภาควิชา`)
+            : std.year >= 2 && std.gpa >= 2.75
+                ? std.help 
+                    ? console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย`)
+                    : console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์แต่ไม่ได้ช่วยงานภาควิชา`)
+                : std.year >= 2 && std.gpa < 2.75
+                    ? std.help 
+                        ? console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์ ถึงแม้ช่วยงานภาควิชา`)
+                        : console.log(`${std.fullname} เกิดเมื่อปี ${birthYear} ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์และยังไม่ช่วยงานภาควิชาด้วย`)
+                    :null;
         })
     </script>
 </body>
